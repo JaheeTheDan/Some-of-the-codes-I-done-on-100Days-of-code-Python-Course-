@@ -12,10 +12,12 @@ YELLOW = '#fbf2cf'
 LIGHT_GREEN = '#9bdeac'
 DARK_GREEN = '#a1c298'
 
+#colour changed
+
 FONT_NAME = "Courier"
 WORK_MIN = 25
 SHORT_BREAK_MIN = 5
-LONG_BREAK_MIN = 20
+LONG_BREAK_MIN = 15
 
 count =0
 timer = ''
