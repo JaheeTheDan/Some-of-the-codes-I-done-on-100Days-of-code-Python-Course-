@@ -15,7 +15,7 @@ DARK_GREEN = '#a1c298'
 FONT_NAME = "Courier"
 WORK_MIN = 25
 SHORT_BREAK_MIN = 5
-LONG_BREAK_MIN = 15
+LONG_BREAK_MIN = 20
 
 count =0
 timer = ''
