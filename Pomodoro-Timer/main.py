@@ -42,6 +42,7 @@ def reset_timer():
     start_button.configure(state='active')
     count = 0
 
+
 def start_timer():
     '''Start the timer when fuction is called'''
     global count
