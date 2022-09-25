@@ -78,20 +78,25 @@ def save():
 
 def search():
     '''Search in data.json for info that go with the website.
-    And info is not found, an error is popup'''
+    And info is not found, an error is shown telling the user info not found'''
     website = website_entry.get().strip()
-    with open('data.json', 'r', encoding='utf-8') as data_file:
-        data_file = json.load(data_file)
 
-    if website in data_file.keys():
-        email = data_file[website]['email']
-        password = data_file[website]['password']
-        messagebox.showinfo(title=website, message=f'Here is the login info'
-                                                   f'\nEmail/Username: {email}'
-                                                   f'\nPassword: {password}')
+    # Check if the data file exist and if not, an error is shown
+    try:
+        with open('data.json', 'r', encoding='utf-8') as data_file:
+            data_file = json.load(data_file)
+    except FileNotFoundError:
+        messagebox.showerror(title='Not Fonund', message='Data file not found')
     else:
-        messagebox.showerror(title='Not Fonund',
-                            message=f'Info for website \'{website}\' is not found.')
+        if website in data_file.keys():
+            email = data_file[website]['email']
+            password = data_file[website]['password']
+            messagebox.showinfo(title=website, message=f'Here is the login info'
+                                                    f'\nEmail/Username: {email}'
+                                                    f'\nPassword: {password}')
+        else:
+            messagebox.showerror(title='Not Fonund',
+                                message=f'Info for website \'{website}\' is not found.')
 
 #Window
 window = Tk()
