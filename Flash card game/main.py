@@ -15,10 +15,8 @@ word = ''
 #Check for if words_to_learn exist and  if not, french_words.csv file is used as data
 try:
     data = pandas.read_csv('data\\words_to_learn.csv')
-    print(0)
 except FileNotFoundError:
     data = pandas.read_csv('data\\french_words.csv')
-    print(1)
 finally:
     data_list = [{'French':row['French'],'English':row['English']} for (_,row) in data.iterrows()]
 
