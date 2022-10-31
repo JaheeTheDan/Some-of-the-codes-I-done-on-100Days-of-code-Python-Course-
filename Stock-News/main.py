@@ -13,7 +13,7 @@ COMPANY_NAME = "Tesla Inc"
 client = Client(ACCOUNT_SID,AUTH_TOKEN )
 
 def differences():
-    '''Calculate the differences between yesturday closing price and day before closing price,
+    '''Calculate the differences between yesterday closing price and day before closing price,
     return a negative or positive percentage difference'''
 
     def get_stock_data()->dict:
