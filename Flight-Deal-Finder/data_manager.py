@@ -7,7 +7,7 @@ class DataManager:
         self.api_endpint='https://api.sheety.co/b45b65668e3451c564c4f538cf9008e8/copyOfFlightDeals/prices'
 
         self.__header={
-            "Authorization": 'Bearer qdangfawfwqfcm'
+            "Authorization": ''
         }
     def flight_to_check(self):
         '''return dictionary with citys wanted to go and there lowest price'''
