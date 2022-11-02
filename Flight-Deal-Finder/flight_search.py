@@ -6,7 +6,7 @@ class FlightSearch:
     '''Use the tequila api to search for the cheapest flights'''
     def __init__(self,from_flight,to_flight):
         self.__header = {
-            'apikey':'Ex_zNfQAjugDsSwaL_CpVwGS4CP7ye_v'
+            'apikey':''
         }
 
         self.today_date = datetime.strftime(datetime.now(),'%d/%m/%Y')
